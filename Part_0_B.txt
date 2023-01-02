@@ -1,0 +1,5 @@
+application at https://studies.cs.helsinki.fi/exampleapp.
+
+The application exists only to demonstrate some basic concepts of the course, and is, by no means, an example of how 
+a modern web application should be made. On the contrary, it demonstrates some old techniques of web development, 
+which could even be considered bad practices nowadays.

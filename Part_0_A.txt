@@ -10,7 +10,7 @@ Participants are expected to have good programming skills, basic knowledge of we
 and know the basics of the Git version control system. You are also expected to have perseverance and a capacity for 
 solving problems and seeking information independently.
 
-xPrevious knowledge of JavaScript or other course topics is not required.
+Previous knowledge of JavaScript or other course topics is not required.
 
 In parts 1-4 you are expected to do at least all of the exercises that are not marked with an asterisk(*). Exercises 
 marked with an asterisk count towards your final grade, but skipping them does not prevent you from doing the 
