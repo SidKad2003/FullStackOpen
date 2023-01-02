@@ -1,0 +1,18 @@
+This course is an introduction to modern web development with JavaScript. The main focus is on single-page 
+applications implemented with React and supporting them with RESTful and GraphQL web services implemented with 
+Node.js. The course also has parts on TypeScript, React Native, and Continuous integration.
+
+Other topics include debugging applications, container technology, configuration, managing runtime environments, 
+and databases.
+
+Prerequisites
+Participants are expected to have good programming skills, basic knowledge of web programming and databases, 
+and know the basics of the Git version control system. You are also expected to have perseverance and a capacity for 
+solving problems and seeking information independently.
+
+xPrevious knowledge of JavaScript or other course topics is not required.
+
+In parts 1-4 you are expected to do at least all of the exercises that are not marked with an asterisk(*). Exercises 
+marked with an asterisk count towards your final grade, but skipping them does not prevent you from doing the 
+compulsory exercises in the next parts. Parts 5- do not have asterisk marked exercises since there is no similar 
+dependency on previous parts.
