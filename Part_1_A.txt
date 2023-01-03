@@ -1,0 +1,33 @@
+Here we see the basic structuring and functioning of a react app:
+we talk abt Components, JSX and Props
+
+
+components are function(or class) having content returned as a JSX which after compiling (see Babel) renders the HTML
+that is to be shown on browser
+Babel is a compilier in short, look on net for more
+
+XML(Extensible Markup Language)  is like HTML, but one can define custom tags. JSX is nothing but a XML 
+language
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
