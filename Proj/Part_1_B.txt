@@ -1,0 +1,24 @@
+Read the preface for this part, its gives an idea why we need transpiling (converting one code
+to other equivalent code)
+
+const t = [1, -1, 3]
+Notable in this example is the fact that the contents of the array can be modified even though 
+it is defined as a const. Because the array is an object, the variable always points to the same object. 
+However, the content of the array changes as new items are added to it.
+
+forEach calls the function for each of the items in the array, always passing the individual item as an 
+argument. The function as the argument of forEach may also receive other arguments.
+
+const t = [1, -1, 3]
+t.forEach(value => {
+  console.log(value)  // numbers 1, -1, 3, 5 are printed, each to own line
+}) 
+
+There are plenty of useful methods defined for arrays. Let's look at a short example of using the map method.
+
+const t = [1, 2, 3]
+
+const m1 = t.map(value => value * 2)
+console.log(m1)   // [2, 4, 6] is printed
+Based on the old array, map creates a new array, for which the function given as a parameter is used to
+create the items. In the case of this example, the original value is multiplied by two.
