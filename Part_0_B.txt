@@ -3,3 +3,48 @@ application at https://studies.cs.helsinki.fi/exampleapp.
 The application exists only to demonstrate some basic concepts of the course, and is, by no means, an example of how 
 a modern web application should be made. On the contrary, it demonstrates some old techniques of web development, 
 which could even be considered bad practices nowadays.
+
+HTTP GET
+The server and the web browser communicate with each other using the HTTP protocol. The Network tab shows how 
+the browser and the server communicate.
+cc: https://developer.mozilla.org/en-US/docs/Web/HTTP
+
+In this section, we see a overview of how websites work and what all are the relevant concepts for both tradional and 
+morden websites
+
+**HTTP GET
+*Traditional web applications
+**Running application logic in the browser
+**Event handlers and Callback functions
+**Document Object Model or DOM
+*Manipulating the document object from console
+*CSS
+**Loading a page containing JavaScript - review
+**Forms and HTTP POST
+**AJAX
+**Single page app
+JavaScript-libraries
+Full-stack web development
+JavaScript fatigue
+
+Vanilla JS -- plain JS, i.e no libraries are used. like the one we used in the expense tracker app for DEV club TSEC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
