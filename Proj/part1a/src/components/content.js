@@ -1,20 +1,14 @@
 const Content = (props) => {
-    const part1 = 'Fundamentals of React'
-    const exercises1 = 10
-    const part2 = 'Using props to pass data'
-    const exercises2 = 7
-    const part3 = 'State of a component'
-    const exercises3 = 14
     return (
       <>
        <p>
-        {part1} {exercises1}
+        {props.part1} {props.exercises1}
       </p>
       <p>
-        {part2} {exercises2}
+        {props.part2} {props.exercises2}
       </p>
       <p>
-        {part3} {exercises3}
+        {props.part3} {props.exercises3}
       </p>
       </>
     )
