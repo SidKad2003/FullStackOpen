@@ -17,7 +17,7 @@ const App = () => {
   }
   return (
     <div>
-      <Header course='Half Stack application development' />
+      <Header course={'Half Stack application development'} />
       <Content part1='Fundamentals of React'
         exercises1={10}
         part2='Using props to pass data'
