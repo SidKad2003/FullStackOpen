@@ -23,7 +23,7 @@ morden websites
 **Forms and HTTP POST
 **AJAX
 **Single page app
-JavaScript-libraries
+**JavaScript-libraries --> why and how react came into being. like the history of client/browser side JS. 
 Full-stack web development
 JavaScript fatigue
 
@@ -35,6 +35,7 @@ dynamically.
 AJAX is not a programming language.
 AJAX is a technique for accessing web servers from a web page.
 AJAX stands for Asynchronous JavaScript And XML.
+https://www.w3schools.com/whatis/whatis_ajax.asp
 
 What is this readyState == 4 in Javascript?
 State 4 means that the request had been sent, the server had finished returning the response and the browser 
@@ -52,6 +53,13 @@ send()		Sends the request to the server (used for GET)
 send(string)	Sends the request to the server (used for POST)
 
 
+JQuery -- its a library which enables us to do the following in a simpler manner when compared to vanilla JS :-
+HTML/DOM manipulation
+CSS manipulation
+HTML event methods
+Effects and animations
+AJAX
+Utilities
 
 
 
