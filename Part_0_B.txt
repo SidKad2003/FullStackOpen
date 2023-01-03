@@ -29,6 +29,30 @@ JavaScript fatigue
 
 Vanilla JS -- plain JS, i.e no libraries are used. like the one we used in the expense tracker app for DEV club TSEC
 
+what is AJAX --> Allows us to communicate with remote servers
+in an asynchronous way. With AJAX calls, we can request data from web servers 
+dynamically.
+AJAX is not a programming language.
+AJAX is a technique for accessing web servers from a web page.
+AJAX stands for Asynchronous JavaScript And XML.
+
+What is this readyState == 4 in Javascript?
+State 4 means that the request had been sent, the server had finished returning the response and the browser 
+had finished downloading the response content.
+
+xhttp.open("GET", "ajax_info.txt", true);
+xhttp.send();
+
+open(method, url, async)	Specifies the type of request
+			method: the type of request: GET or POST
+			url: the server (file) location
+			async: true (asynchronous) or false (synchronous)
+
+send()		Sends the request to the server (used for GET)
+send(string)	Sends the request to the server (used for POST)
+
+
+
 
 
 
