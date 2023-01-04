@@ -11,7 +11,7 @@ const Header = (course) => {
 
 // the following works too, if we pass any obejct as props, the system will work just fine,
 //thats the way it is IG.
-
+//see: https://fullstackopen.com/en/part1/component_state_event_handlers#passing-state-to-child-components   
   // const Header = (props) => {
   //   return (
   //     <>
