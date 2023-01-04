@@ -6,7 +6,8 @@ function Buttons() {
     const [Good, setGood] = useState(0)
     const [Neutral, setNeutral] = useState(0)
     const [Bad, setBad] = useState(0)
-    {console.log(Good +" "+ Bad + " " + Neutral)}  
+    {console.log(Good +" "+ Bad + " " + Neutral)} 
+     
     return (
         <div>
         <button onClick={() => setGood(Good + 1)}>Good</button>
