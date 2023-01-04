@@ -1,0 +1,24 @@
+for states refer:
+https://fullstackopen.com/en/part1/component_state_event_handlers#stateful-component
+
+states is responsible to re-render the component when-so-ever the variable changes
+
+i.e the component re-renders when value of "counter" changes:
+
+import { useState } from 'react'
+const App = () => {
+  const [ counter, setCounter ] = useState(0)
+
+  setTimeout(
+    () => setCounter(counter + 1),
+    1000
+  )
+  return (
+    <div>{counter}</div>
+  )
+}
+export default App
+
+And, React re-renders the component which means that the function body of the component function gets re-executed.
+Meaning setTimeout will be called again causing the value of counter to change again and hence the component re-renders
+this how we create a seconds counter Web App for implementing States
