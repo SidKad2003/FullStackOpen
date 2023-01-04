@@ -22,3 +22,8 @@ export default App
 And, React re-renders the component which means that the function body of the component function gets re-executed.
 Meaning setTimeout will be called again causing the value of counter to change again and hence the component re-renders
 this how we create a seconds counter Web App for implementing States
+
+
+see:
+<button onClick={setCounter(counter + 1)}> vs <button onClick={() => setCounter(counter + 1)}>
+on: https://fullstackopen.com/en/part1/component_state_event_handlers#an-event-handler-is-a-function
