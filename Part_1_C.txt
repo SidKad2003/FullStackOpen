@@ -27,3 +27,47 @@ this how we create a seconds counter Web App for implementing States
 see:
 <button onClick={setCounter(counter + 1)}> vs <button onClick={() => setCounter(counter + 1)}>
 on: https://fullstackopen.com/en/part1/component_state_event_handlers#an-event-handler-is-a-function
+
+
+// the following works too, if we pass any obejct as props, the system will work just fine,
+//thats the way it is IG.
+//see: https://fullstackopen.com/en/part1/component_state_event_handlers#passing-state-to-child-components  
+
+//the following syntax by default sets the value of props.course to the passed value in App.js
+
+  // const Header = (props) => {
+  //   return (
+  //     <>
+  //      <h1>{props.course}</h1>
+  //      {/* <h1>{props.course}</h1> */}
+  //     </>
+  //   )
+  // }
+
+  // export default Header;
+
+
+
+part D:
+
+see for debuggin from Chrome browser : https://fullstackopen.com/en/part1/a_more_complex_state_debugging_react_apps#debugging-react-applications
+
+React Hooks
+Hooks are the new feature introduced in the React 16.8 version. It allows you to use state and other React features 
+without writing a class. Hooks are the functions which "hook into" React state and lifecycle features from function 
+components. It does not work inside classes.
+
+
+here setcounter is assigned to onClick and is called irrespective of the click made <button onClick={setCounter(counter + 1)}>
+whereas here the function which further calls setCounter is assigned to onClick
+and hence after the click setCounter is called in <button onClick={() => setCounter(counter + 1)}>
+
+ChatGPT:
+Correct! In the first example, setCounter(counter + 1) is being called immediately when the component is rendered, 
+and the return value of that function is being passed to onClick. In the second example, an anonymous function is 
+being passed to onClick, which will be called when the button is clicked. This anonymous function then calls 
+setCounter(counter + 1).
+
+In the first example, the counter value will always be incremented by 1 when the component is rendered, 
+regardless of whether the button is clicked or not. In the second example, the counter value will only be incremented 
+when the button is clicked.
