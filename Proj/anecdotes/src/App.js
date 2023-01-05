@@ -34,6 +34,20 @@ const App = () => {
       <p>Has {temp1[selected.selected]} Votes</p>
     )
   }
+  const [answer, setAnswer] = useState(points.indexOf(Math.max(...points)))
+  
+  const Stat = () =>
+  {
+    setAnswer(points.indexOf(Math.max(...points)))
+    return (
+      <div>
+        <h1>Anecdote with Most Votes</h1>
+        <p>{anecdotes[answer]}</p>
+        <p>Has {Math.max(...points)} votes</p>
+      </div>
+    )
+  }
+  
 
   return (
     <>
@@ -43,6 +57,7 @@ const App = () => {
       <Button onClick={handleAnecdotes} text="Next Anecdote" />
       <Button onClick={handlevotes} text="Vote Here!!" />
       <Disvotes selected={selected} />
+      <Stat/>
     </>
   )
 }
