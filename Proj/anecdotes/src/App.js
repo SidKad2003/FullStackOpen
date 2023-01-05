@@ -12,7 +12,7 @@ const App = () => {
   ]
 
   const [selected, setSelected] = useState(0)
-  const [points, setpoints] = useState([0,0,0,0,0,0,0])
+  const [points, setpoints] = useState([0, 0, 0, 0, 0, 0, 0])
 
   const Button = ({ onClick, text }) => (
     <button onClick={onClick}>
@@ -23,17 +23,17 @@ const App = () => {
     setSelected(Math.floor(Math.random() * 7))
   }
 
+  const temp1 = [...points]
   const handlevotes = () => {
-    const temp1 = [...points]
     temp1[selected] += 1
     setpoints(temp1)
-    console.log("selected is "+[selected])
-    console.log(" "+temp1[0]+" "+temp1[1]+" "+temp1[2]+" "+temp1[3]+" "+temp1[4]+" "+temp1[5]+" "+temp1[6])
   }
 
-  // const Disvotes = (selected) => {
-  //   <p></p>
-  // }
+  const Disvotes = (selected) => {
+    return (
+      <p>Has {temp1[selected.selected]} Votes</p>
+    )
+  }
 
   return (
     <>
@@ -42,6 +42,7 @@ const App = () => {
       </div>
       <Button onClick={handleAnecdotes} text="Next Anecdote" />
       <Button onClick={handlevotes} text="Vote Here!!" />
+      <Disvotes selected={selected} />
     </>
   )
 }
