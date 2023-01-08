@@ -1,0 +1,45 @@
+what's a event target?
+In the context of an event in a computer program, the target of the event is the object or element on which the event occurred. 
+In other words, it is the element or object that was the recipient of the event and that triggered the event listener to 
+execute the event handler function.
+
+For example, if you have an HTML element with an event listener registered on it to listen for a mouse click event, the target 
+of the event would be the HTML element on which the mouse click occurred. In the event handler function that is 
+executed when the event is triggered, you can access the target of the event through the event.target property. 
+This can be useful if you want to perform some action on the target element or object, or if you want to get information 
+about the element or object that triggered the event.
+
+
+can we say that event listener contains event handler?
+
+Yes, an event listener is a function that listens for a specific event to occur and executes a corresponding 
+event handler function when the event is triggered. An event listener is registered on an element or object in your 
+HTML, CSS, or JavaScript code, and it listens for a specific type of event to occur on that element or object. 
+When the event occurs, the event listener function is called, and the event handler function is executed to handle the 
+event. So you can say that an event listener contains an event handler, since the event handler is the function that is 
+executed when the event listener is triggered.
+
+
+event.target.value refers to the value of an element that triggered an event, such as the value of an input field. 
+It is often used in event handler functions to access the current value of an element.
+
+onChange is an event handler attribute that is used to specify a function to be called when the value of an element 
+changes. It is commonly used with form elements such as input fields and textareas to update the state of a React 
+component when the user changes the value of the element.
+
+Here is an example of using event.target.value and onChange together:
+
+const handleChange = (event) => {
+  setValue(event.target.value)
+}
+
+<input value={value} onChange={handleChange} />
+In this example, the handleChange function is called whenever the user changes the value of the input field. The 
+event.target.value property is used to access the current value of the input field, and the setValue function is used to
+update the value of the value state variable with the current value of the input field.
+
+So the difference between event.target.value and onChange is that event.target.value is a property of the event object 
+that is passed to an event handler function, and onChange is an event handler attribute that specifies a function to be 
+called when the value of an element changes.
+
+
