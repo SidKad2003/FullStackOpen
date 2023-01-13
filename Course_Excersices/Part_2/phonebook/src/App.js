@@ -3,18 +3,21 @@ import { useState } from 'react';
 import Add from './components/Add';
 import Setfilter from './components/Setfilter';
 import Display from './components/Display';
-
+import { useEffect } from 'react';
+import axios from 'axios';
 
 const App = () => {
-
   const [persons, setPersons] = useState([
     { name: 'Arto Hellas', contact: 65654446 }
   ])
-  const [newName, setNewName] = useState('')
-  const [newcontact, setNewcontact] = useState('')
-  const [show, setShow] = useState([{name: 'Arto Hellas', contact: 65654446}])
-  const [newfilter, setNewfilter] = useState('')
-
+  useEffect(()=>{
+    axios.get('http://localhost:3001/persons')
+    .then(response => setPersons(response.data))
+  }, [])
+    const [newName, setNewName] = useState('')
+    const [newcontact, setNewcontact] = useState('')
+    const [show, setShow] = useState([{name: 'Arto Hellas', contact: 65654446}])
+    const [newfilter, setNewfilter] = useState('')
   const changing = (event) => {
     setNewName((event.target.value))
   }
