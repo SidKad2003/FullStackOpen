@@ -46,5 +46,52 @@ All those patterns are in use today, but the Async/Await is becoming the most co
 It is important to note that JavaScript is not the only one language that have these features, many other programming
 languages have their own implementation of async mechanisms, like Python's asyncio, Java's Future and more.
 
+While Excer 2.11 to 2.14
+
+saw the use of effect hooks and Axios which permits usage of data from a server
+
+
+While Excer 2.15 to 2.18
+
+we interact with the server via HTTP's put, patch and delete requests
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

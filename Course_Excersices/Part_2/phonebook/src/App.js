@@ -44,8 +44,10 @@ const App = () => {
     setPersons(persons.concat(addobj))
     console.log(persons)
     alert(`${addobj.name} was Added with contact No. as ${addobj.contact}`)
+    axios.post('http://localhost:3001/persons', addobj)
     event.preventDefault()
   }
+  
   return (
     <div>
       <h2>Add a New</h2>
@@ -53,27 +55,7 @@ const App = () => {
       <h3>Filter</h3>
       <Setfilter changingfilter={changingfilter} filtering={filtering}/>
       <Display persons={persons} show={show}/>
-      {/* <h2>Phonebook</h2>
-        <div>
-          Filter shown with: <input onChange={changingfilter} />
-          <button onClick={filtering}>add</button>
-        </div>
-      <form onSubmit={addnew}>
-        <div>
-          name: <input onChange={changing} />
-        </div>
-        <div>
-          Contact: <input onChange={changingcontact} />
-        </div>
-        <div>
-          <button type="submit">add</button>
-        </div>
-      </form>
-      {persons.map((value) => <li>{value.name} :  {value.contact}</li>
-      )}
-      <h2>Filtered</h2>
-      {show.map((value) => <li>{value.name} :  {value.contact}</li>
-      )} */}
+      
 
     </div>
     
