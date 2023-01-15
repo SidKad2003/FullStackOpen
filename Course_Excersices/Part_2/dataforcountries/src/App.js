@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios'
+import Display from './components/display';
 
 function App() {
   const [notes, setNotes] = useState([])
@@ -45,7 +46,8 @@ function App() {
         <div>
           <button type="Submit">add</button>
         </div>
-      </form>s
+      </form>
+      <Display obj = {search}/>
     </>
 
   );
