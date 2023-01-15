@@ -1,0 +1,50 @@
+A runtime environment is a set of software tools that provide the infrastructure necessary for a program or application 
+to run. It includes the operating system, as well as any additional libraries or components that are required for the 
+program to function. A JavaScript engine is a program that executes JavaScript code.
+
+A JavaScript engine is typically part of a larger runtime environment, such as a web browser or a JavaScript runtime 
+like Node.js. A JavaScript engine converts the JavaScript code, which is written in a high-level language, into machine 
+code that the computer can understand and execute. The process of converting the code is called "compilation."
+
+In the case of web browsers, the JavaScript engine is responsible for executing the JavaScript code on a web page, 
+which can include things like manipulating the Document Object Model (DOM), making network requests, and 
+handling user interactions. In the case of Node.js, the JavaScript engine is responsible for executing JavaScript code 
+on the server, which can include things like working with the file system, creating network servers, and interacting 
+with databases.
+
+Some examples of JavaScript engines are:
+
+V8 (Chrome, Opera, Node.js)
+
+
+why do we need Async JS 
+JavaScript, like most programming languages, is single-threaded, which means that it can only execute one task at a 
+time. In the browser, this can be a problem when a script performs a long-running task, such as making an API request
+or reading a large file. During the time that the script is executing the task, the user interface will be unresponsive 
+and the browser may appear to have "frozen." This can create a poor user experience, and in some cases, the script 
+may even time out before the task is completed.
+
+To overcome this limitation, JavaScript provides several mechanisms for working with asynchronous code, which 
+allows you to perform long-running tasks in the background, without blocking the execution of the rest of your code. 
+This way, your script can continue to execute other code while the long-running task is performed, making the user 
+interface responsive and the browser responsive.
+
+There are several ways to work with asynchronous code in JavaScript:
+
+Callbacks: A callback is a function that is passed as an argument to another function, and is executed when the task is 
+completed. This is the most basic way of working with asynchronous code in JavaScript and is still widely used today.
+
+Promises: A promise is an object that represents the eventual outcome of an asynchronous operation. A promise can be 
+in one of three states: fulfilled, rejected, or pending. Promises provide a more powerful and flexible way of working with 
+asynchronous code, as well as error handling.
+Async/Await: An extension to the Promises pattern, which allows you to write asynchronous code that reads like 
+synchronous code, using the async and await keywords. This makes your code more readable, and less verbose 
+compared to the callback pattern
+
+All those patterns are in use today, but the Async/Await is becoming the most common.
+
+It is important to note that JavaScript is not the only one language that have these features, many other programming
+languages have their own implementation of async mechanisms, like Python's asyncio, Java's Future and more.
+
+
+
