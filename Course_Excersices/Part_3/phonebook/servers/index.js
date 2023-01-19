@@ -1,4 +1,5 @@
 const express = require('express')
+const { useState } = require('react')
 const app = express()
 
 let notes = [
@@ -23,7 +24,6 @@ let notes = [
         "number": "39-23-6423122"
     }
 ]
-
 app.get('/', (request, response) => {
     response.send('<h1>Hello World!</h1>')
 })
@@ -36,14 +36,43 @@ app.get('/notes', (request, response) => {
     response.json(notes)
 })
 
+app.post('/notes/adding', (request, response) => {
+    // const[noes, setNoes] = useState(notes)
+    // response.json(ad)
+    
+    const ad = {
+        "name":String(request.params.a),
+        "number":Number(request.params.b),
+    }
+    response.json(ad)
+})
+
 app.get('/notes/:id', (request, response) => {
     const id = request.params.id
     console.log(typeof id)
     const note = notes.find(note => note.id === Number(id))
-    response.send(note)
-    console.log(note)
+    if(note){
+        response.send(note)
+        console.log(note)
+    }
+    else{
+        response.status(404).send(`<p>Not found</p>`)
+    }
 })
-
+app.delete('/notes/:id', (request, response) => {
+    const[noes, setNoes] = useState(notes)
+    const id = request.params.id
+    console.log(typeof id)
+    const note = notes.filter(note => note.id != Number(id))
+    if(note){
+        response.send(note)
+        console.log(note)
+    }
+    else{
+        response.status(404).send(`<p>Not found</p>`)
+    }
+    setNoes(note)
+})
 const PORT = 3001
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
