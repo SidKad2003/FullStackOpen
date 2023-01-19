@@ -32,16 +32,16 @@ app.get('/info', (request, response) => {
     response.send(`<p>Phonebook has info for 2 people</p><p> ${now}</p>`)
 }
 )
-// console.log(getDate())
-
 app.get('/notes', (request, response) => {
     response.json(notes)
 })
 
 app.get('/notes/:id', (request, response) => {
     const id = request.params.id
-    const note = notes.find(note => note.id === id)
-    response.json(note)
+    console.log(typeof id)
+    const note = notes.find(note => note.id === Number(id))
+    response.send(note)
+    console.log(note)
 })
 
 const PORT = 3001
