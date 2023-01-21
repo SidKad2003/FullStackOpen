@@ -3,6 +3,7 @@ const { useState } = require('react')
 const app = express()
 const cors = require('cors')
 
+app.use(cors());
 let notes = [
     {
         "id": 1,
@@ -37,7 +38,7 @@ app.get('/notes', (request, response) => {
     response.json(notes)
 })
 
-app.post('/notes/adding', (request, response) => {
+app.post('/notes', (request, response) => {
     // const[noes, setNoes] = useState(notes)
     // response.json(ad)
     
@@ -45,6 +46,7 @@ app.post('/notes/adding', (request, response) => {
         "name":String(request.params.a),
         "number":Number(request.params.b),
     }
+    notes.push(ad)
     response.json(ad)
 })
 
@@ -74,9 +76,14 @@ app.delete('/notes/:id', (request, response) => {
     }
     setNoes(note)
 })
+// app.use(function(req, res, next) {
+//     res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+//   });
+
 const PORT = 3001
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 })
-
-app.use(cors)
+// app.use(cors)
