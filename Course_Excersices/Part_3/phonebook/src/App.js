@@ -8,18 +8,19 @@ import axios from 'axios';
 
 const App = () => {
   const [persons, setPersons] = useState([
-    { name: 'Arto Hellas', contact: 65654446 }
+  //  "ww" // { name: 'Arto Hellas', contact: 65654446 }
   ])
   useEffect(()=>{
-    axios.get('http://localhost:3001/persons')
+    axios.get('http://localhost:3001/notes')
     .then(response => setPersons(response.data))
   }, [])
+  // console.log(persons)
     const [newName, setNewName] = useState('')
     const [newcontact, setNewcontact] = useState('')
     const [show, setShow] = useState([{name: 'Arto Hellas', contact: 65654446}])
     const [newfilter, setNewfilter] = useState('')
-  const changing = (event) => {
-    setNewName((event.target.value))
+    const changing = (event) => {
+      setNewName((event.target.value))
   }
   const changingfilter = (event) => {
     setNewfilter((event.target.value))
@@ -37,7 +38,7 @@ const App = () => {
   const filtering = () => {
     setShow(persons.filter(persons => persons.name === newfilter))
     console.log(show)
-   }
+  }
    
    const addnew = (event) => {
     console.log(newName)
@@ -59,7 +60,7 @@ const App = () => {
 
     </div>
     
-  )
+    )
 }
 
 export default App

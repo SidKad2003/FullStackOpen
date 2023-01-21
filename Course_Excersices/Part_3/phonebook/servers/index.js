@@ -1,6 +1,7 @@
 const express = require('express')
 const { useState } = require('react')
 const app = express()
+const cors = require('cors')
 
 let notes = [
     {
@@ -77,3 +78,5 @@ const PORT = 3001
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 })
+
+app.use(cors)
